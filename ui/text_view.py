@@ -7,13 +7,12 @@ import random
 
 class TextView(QTextEdit):
 
-    def __init__(self, parent):
+    def __init__(self, parent) -> None:
         super().__init__()
         self.setAcceptRichText(False)
         self.setTabChangesFocus(True)
         # self.setReadOnly(True)
-        self.setText(
-            "Now here you go again, you say you want your freedom\nWell, who am I to keep you down?")
+        self.setText("");
         self.curr_colors = []  # current highlighted colors in use
 
     def get_selected(self) -> str:
