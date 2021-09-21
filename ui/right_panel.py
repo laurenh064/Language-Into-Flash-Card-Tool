@@ -8,7 +8,7 @@ class RightPanel(QtWidgets.QWidget):
         super(RightPanel, self).__init__(parent)
         self._ui()
 
-    def _ui(self):
+    def _ui(self) -> None:
         '''
         Returns a panel with table and add, delete buttons
         '''
@@ -25,5 +25,5 @@ class RightPanel(QtWidgets.QWidget):
         layout.addWidget(self.info_label)
         layout.addWidget(self.text_view)
 
-    def update_label(self, song, artist):
+    def update_label(self, song, artist) -> None:
         self.info.setText(song + '|' + artist)

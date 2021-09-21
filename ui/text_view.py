@@ -4,7 +4,7 @@ from PyQt5.QtCore import QRegExp
 
 class TextView(QTextEdit):
 
-    def __init__(self, parent):
+    def __init__(self, parent) -> None:
         super().__init__()
         self.setAcceptRichText(False)
         self.setTabChangesFocus(True)
