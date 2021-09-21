@@ -1,14 +1,7 @@
-#from ui.homescreen import Homescreen
-
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 import sys
-
-# ? Ideas:
-#   * Lock text button (set textview to read only)
-#   * Change font size button/short cut
-
 
 def start():
     app = QApplication(sys.argv)

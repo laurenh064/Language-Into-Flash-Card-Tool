@@ -17,7 +17,7 @@ class TableView(QTableWidget):
     def add_row(self, source_text: TextView) -> None:
         text = source_text.get_selected()
 
-        #! Add Highlight
+        # Add Highlight
         if text != '':
             source_text.highlight_text(text, True)
 

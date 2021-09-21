@@ -30,19 +30,3 @@ class LeftPanel(QWidget):
         grid.addWidget(delete_button, 1, 1, 1, 1)
         grid.addWidget(export_button, 2, 0, 1, 2)
 
-    def on_export(self) -> None:
-        '''Exports Table as CSV'''
-        path = QFileDialog.getSaveFileName(
-            self, 'Export CSV', os.getenv('HOME'), 'CSV(*.csv)')
-        if path[0] != '':
-            with open(path[0], 'w', encoding='utf-8') as csv_file:
-                writer = csv.writer(csv_file, delimiter=';')
-                for row in range(self.table.rowCount()):
-                    row_data = []
-                    for column in range(self.table.columnCount()):
-                        item = self.table.item(row, column)
-                        if item is not None:
-                            row_data.append(item.text())
-                        else:
-                            row_data.append('')
-                    writer.writerow(row_data)
